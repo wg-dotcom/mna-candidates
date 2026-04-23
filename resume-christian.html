@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christian &mdash; Resume | Sagan Passport</title>
+  <link rel="icon" type="image/png" href="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #093a3e;
+      --primary-dark: #06282b;
+      --highlight: #d4c79c;
+      --dark: #0e1014;
+      --bg-page: #f3f2ec;
+      --bg-card: #fafaf7;
+      --bg-subtle: #e5e2d3;
+      --text-primary: #0e1014;
+      --text-mid: #3a3a3a;
+      --text-light: #6b6b6b;
+      --border: rgba(14,16,20,0.12);
+      --font-display: 'Fraunces', Georgia, serif;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg-page); color: var(--text-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 860px; margin: 40px auto; background: #fff; box-shadow: 0 1px 8px rgba(14,16,20,0.08); border-radius: 4px; overflow: hidden; }
+    .header { background: var(--dark); padding: 44px 52px 38px; position: relative; color: #fff; }
+    .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; }
+    .logo-row { display: flex; align-items: center; gap: 10px; }
+    .logo-row img { height: 22px; }
+    .logo-row .divider { width: 1px; height: 18px; background: rgba(255,255,255,0.2); }
+    .logo-text { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--highlight); }
+    .confidential { font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 1.5px; text-transform: uppercase; }
+    .name { font-family: var(--font-display); font-size: 38px; font-weight: 600; color: #fff; margin-bottom: 8px; letter-spacing: -0.02em; }
+    .headline { font-size: 14.5px; color: rgba(255,255,255,0.75); margin-bottom: 18px; line-height: 1.55; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; color: rgba(255,255,255,0.7); }
+    .accent-bar { height: 3px; background: linear-gradient(90deg, var(--highlight), var(--primary)); position: absolute; bottom: 0; left: 0; right: 0; }
+
+    .body { padding: 40px 52px 48px; }
+    .section { margin-bottom: 32px; }
+    .section:last-child { margin-bottom: 0; }
+    .section-label { font-size: 10.5px; font-weight: 800; letter-spacing: 2.2px; text-transform: uppercase; color: var(--primary); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1.5px solid var(--border); }
+    .summary { font-size: 14px; color: var(--text-mid); line-height: 1.78; }
+    .summary strong { color: var(--text-primary); font-weight: 600; }
+
+    .job { margin-bottom: 22px; }
+    .job:last-child { margin-bottom: 0; }
+    .job-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+    .job-company { font-size: 14.5px; font-weight: 600; color: var(--text-primary); }
+    .job-role { font-weight: 400; color: var(--text-light); }
+    .job-date { font-size: 12px; color: var(--text-light); white-space: nowrap; }
+    .job-location { font-size: 12px; color: #9ca3af; margin-bottom: 10px; font-style: italic; }
+    .job ul { padding-left: 18px; }
+    .job li { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 5px; }
+
+    .edu { margin-bottom: 14px; }
+    .edu-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .edu-degree { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+    .edu-school { font-size: 12.5px; color: var(--text-light); }
+
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tag { font-size: 11.5px; color: var(--text-mid); background: var(--bg-subtle); padding: 5px 12px; border-radius: 4px; }
+    .skill-tag.highlight { background: rgba(9,58,62,0.08); color: var(--primary); font-weight: 600; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; }
+
+    .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
+    .metric-box { background: var(--bg-subtle); border-radius: 8px; padding: 16px 18px; border: 1px solid var(--border); }
+    .metric-value { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--primary); }
+    .metric-label { font-size: 11.5px; color: var(--text-light); margin-top: 4px; line-height: 1.4; }
+
+    .footer { background: var(--dark); padding: 14px 52px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--highlight); }
+    .footer-conf { font-size: 9px; color: rgba(255,255,255,0.35); }
+
+    @media print { body { background: #fff; } .page { margin: 0; box-shadow: none; } }
+    @media (max-width: 640px) { .header, .body, .footer { padding-left: 24px; padding-right: 24px; } .two-col { grid-template-columns: 1fr; } .metric-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-top">
+      <div class="logo-row">
+        <img src="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" alt="Sagan Passport" />
+        <div class="divider"></div>
+        <span class="logo-text">Sagan Passport</span>
+      </div>
+      <span class="confidential">Confidential</span>
+    </div>
+    <div class="name">Christian</div>
+    <div class="headline">Fractional CFO &amp; Quantitative Portfolio Manager &middot; Capital Markets &middot; IPADE MBA</div>
+    <div class="meta-row">
+      <span>CDMX, México &middot; Remote</span>
+      <span>CST / EST Aligned</span>
+      <span>Spanish (Native), English (Professional)</span>
+    </div>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="body">
+    <div class="section">
+      <div class="section-label">Executive Profile</div>
+      <p class="summary">
+        Strategic <strong>Fractional CFO and Quantitative Analyst</strong> with over <strong>10 years of experience</strong> orchestrating capital structures, optimizing liquidity, and managing investment portfolios for high-growth SMEs and private funds. Combines the business acumen of an <strong>IPADE MBA</strong> with the analytical rigor of Applied Mathematics and <strong>Series 3 (NFA)</strong> certification. Proven track record in high-stakes environments: navigated <strong>NASDAQ / TSX listing requirements</strong>, supported capital raises exceeding <strong>$300M USD</strong>, and achieved verified portfolio returns of 37.05% (2025) and 46.48% (2024) using quantitative derivatives strategies.
+      </p>
+
+      <div class="metric-row">
+        <div class="metric-box"><div class="metric-value">$300M+</div><div class="metric-label">Capital raises supported (USD)</div></div>
+        <div class="metric-box"><div class="metric-value">46.48%</div><div class="metric-label">Net annual return, 2024 (quant derivatives)</div></div>
+        <div class="metric-box"><div class="metric-value">NASDAQ / TSX</div><div class="metric-label">Listing &amp; regulatory exposure</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Core Competencies</div>
+      <div class="two-col">
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">CFO Services</div>
+          <div class="skill-tags" style="margin-bottom:14px;">
+            <span class="skill-tag highlight">FP&amp;A</span>
+            <span class="skill-tag highlight">Cash Flow Optimization</span>
+            <span class="skill-tag highlight">Unit Economics (LTV / CAC)</span>
+            <span class="skill-tag highlight">M&amp;A Due Diligence</span>
+          </div>
+          <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Capital Markets</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Capital Structuring (Debt / Equity)</span>
+            <span class="skill-tag">Fundraising ($10M+ deals)</span>
+            <span class="skill-tag">IPO Readiness</span>
+            <span class="skill-tag">Investor Relations</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Quantitative Finance</div>
+          <div class="skill-tags" style="margin-bottom:14px;">
+            <span class="skill-tag highlight">DCF &amp; 3-Statement Modeling</span>
+            <span class="skill-tag highlight">Derivatives (Options / Futures)</span>
+            <span class="skill-tag">Risk Management</span>
+            <span class="skill-tag">Portfolio Optimization</span>
+          </div>
+          <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Operations &amp; Tech</div>
+          <div class="skill-tags">
+            <span class="skill-tag">AI Implementation for Finance</span>
+            <span class="skill-tag">Business Intelligence (BI)</span>
+            <span class="skill-tag">Strategic Turnarounds</span>
+            <span class="skill-tag">Deal Structuring</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Professional Experience</div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Finalytics / Private Practice <span class="job-role">&mdash; Fractional CFO &amp; Quantitative Portfolio Manager</span></span>
+          <span class="job-date">Jan 2018 – Present</span>
+        </div>
+        <div class="job-location">Remote &amp; CDMX</div>
+        <ul>
+          <li>Served as <strong>strategic CFO for a diverse portfolio of public and private companies</strong>, overseeing capital structuring and liquidity management.</li>
+          <li><strong>Capital Markets Strategy:</strong> Supported due diligence and financial modeling for capital raises exceeding <strong>$300M USD</strong>, navigating regulatory frameworks for companies listed on NASDAQ and TSX.</li>
+          <li><strong>Quantitative Asset Management:</strong> Engineered and executed algorithmic trading strategies focused on financial derivatives (Futures / Options), achieving a <strong>46.48% net annual return in 2024</strong>.</li>
+          <li><strong>Corporate Turnaround:</strong> Advised boards on debt restructuring and operational efficiency, implementing strict KPI controls that recovered cash flow solvency for distressed SMEs.</li>
+          <li><strong>Tech Integration:</strong> Deployed AI-driven financial analysis tools to automate market research and risk assessment, reducing reporting time by 60%.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">U N K N O W N (Marketing Agency) <span class="job-role">&mdash; Chief Financial Officer</span></span>
+          <span class="job-date">Jan 2023 – Sep 2024</span>
+        </div>
+        <div class="job-location">CDMX &middot; Digital marketing and branding agency</div>
+        <ul>
+          <li><strong>Financial Operations &amp; Liquidity:</strong> Led full-cycle financial management, overseeing Accounts Receivable, Accounts Payable, and strict cash flow controls to maintain liquidity for heavy digital ad spend.</li>
+          <li><strong>Agency Unit Economics &amp; Data Analysis:</strong> Built financial dashboards to track project profitability margins, billable utilization rates, and client retainer health.</li>
+          <li><strong>Client Portfolio Management:</strong> Managed financial planning and budget tracking for high-ticket marketing campaigns across B2B and B2C sectors, primarily in Financial Services and Beauty industries.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Virtual Academy Ventures (EdTech) <span class="job-role">&mdash; Director of Operations &amp; Digital Strategy</span></span>
+          <span class="job-date">Jan 2020 – Dec 2022</span>
+        </div>
+        <div class="job-location">Mexico</div>
+        <ul>
+          <li>Led end-to-end operational setup, financial planning, and go-to-market strategy for a specialized e-learning platform.</li>
+          <li><strong>Unit Economics Optimization:</strong> Built granular cohort retention models to track <strong>LTV and CAC</strong>, pivoting marketing spend to high-contribution margin channels.</li>
+          <li><strong>Leadership:</strong> Directed a multidisciplinary team of 15 professionals, ensuring project milestones were met on time and under budget during launch.</li>
+          <li>Validated product-market fit, achieving high user satisfaction and successful enrollment targets through data-driven digital marketing.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Shinity Financial Consulting <span class="job-role">&mdash; Corporate Finance Consultant &amp; Deal Structuring Advisor</span></span>
+          <span class="job-date">Jan 2016 – Dec 2018</span>
+        </div>
+        <div class="job-location">Mexico &middot; Boutique capital acquisition and strategic growth consultancy for SMEs</div>
+        <ul>
+          <li><strong>Deal Structuring:</strong> Successfully structured complex debt and equity financing packages, securing <strong>over $10M</strong> in funding for commercial clients via private equity and government liaisons.</li>
+          <li><strong>Credit Analysis:</strong> Developed institutional-grade financial models and credit memos to validate borrower solvency for lenders.</li>
+          <li>Advised entrepreneurs on capital stack optimization, positioning clients to access liquidity and scale operations efficiently.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Krispy Kreme Distribution / Food Service Group <span class="job-role">&mdash; Head of Operations &amp; Financial Strategy</span></span>
+          <span class="job-date">2011 – 2016</span>
+        </div>
+        <div class="job-location">Multiple Cities, Mexico</div>
+        <ul>
+          <li>Scaled distribution operations to <strong>$1M+ MXN monthly sales</strong>, managing logistics across 6 cities.</li>
+          <li>Implemented strict cash flow controls and inventory optimization systems, significantly reducing waste and increasing net margins.</li>
+          <li>Previously co-founded a restaurant chain and grew the business from concept to 2 profitable branches before a successful exit and transition.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Education</div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">B.S. in Applied Mathematics (Ongoing)</span>
+        </div>
+        <div class="edu-school">Universidad Abierta y a Distancia de México (UNADM)</div>
+      </div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">Master in Business Administration (MBA) &mdash; GPA 9.6</span>
+        </div>
+        <div class="edu-school">IPADE Business School</div>
+      </div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">Bachelor of Business Administration &mdash; Top of Class</span>
+        </div>
+        <div class="edu-school">Escuela Bancaria y Comercial (EBC)</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-label">Certifications &amp; Advanced Training</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Series 3 (NFA, USA)</span>
+          <span class="skill-tag highlight">CMT Level 1</span>
+          <span class="skill-tag">Quant Finance &amp; Data Science &mdash; RiskMathics</span>
+          <span class="skill-tag">SPACs &mdash; RiskMathics</span>
+          <span class="skill-tag">Trading &mdash; RiskMathics</span>
+          <span class="skill-tag">Investment Banking Executive Program</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Technical Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Advanced Excel (VBA / Macros)</span>
+          <span class="skill-tag highlight">Financial Modeling (3-Statement, DCF, LBO)</span>
+          <span class="skill-tag highlight">Python (Pandas, NumPy)</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Bloomberg Terminal</span>
+          <span class="skill-tag">AI Tools for Analysis</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Languages</div>
+      <div class="skill-tags">
+        <span class="skill-tag highlight">Spanish &mdash; Native</span>
+        <span class="skill-tag highlight">English &mdash; Full Professional Proficiency</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-logo">Sagan Passport</span>
+    <span class="footer-conf">Confidential &middot; M&amp;A / Finance Search &middot; Batch 1 &middot; April 23, 2026</span>
+  </div>
+</div>
+</body>
+</html>

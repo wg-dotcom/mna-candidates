@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahad &mdash; Resume | Sagan Passport</title>
+  <link rel="icon" type="image/png" href="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #093a3e;
+      --primary-dark: #06282b;
+      --highlight: #d4c79c;
+      --dark: #0e1014;
+      --bg-page: #f3f2ec;
+      --bg-card: #fafaf7;
+      --bg-subtle: #e5e2d3;
+      --text-primary: #0e1014;
+      --text-mid: #3a3a3a;
+      --text-light: #6b6b6b;
+      --border: rgba(14,16,20,0.12);
+      --font-display: 'Fraunces', Georgia, serif;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg-page); color: var(--text-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 860px; margin: 40px auto; background: #fff; box-shadow: 0 1px 8px rgba(14,16,20,0.08); border-radius: 4px; overflow: hidden; }
+    .header { background: var(--dark); padding: 44px 52px 38px; position: relative; color: #fff; }
+    .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; }
+    .logo-row { display: flex; align-items: center; gap: 10px; }
+    .logo-row img { height: 22px; }
+    .logo-row .divider { width: 1px; height: 18px; background: rgba(255,255,255,0.2); }
+    .logo-text { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--highlight); }
+    .confidential { font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 1.5px; text-transform: uppercase; }
+    .name { font-family: var(--font-display); font-size: 38px; font-weight: 600; color: #fff; margin-bottom: 8px; letter-spacing: -0.02em; }
+    .headline { font-size: 14.5px; color: rgba(255,255,255,0.75); margin-bottom: 18px; line-height: 1.55; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; color: rgba(255,255,255,0.7); }
+    .accent-bar { height: 3px; background: linear-gradient(90deg, var(--highlight), var(--primary)); position: absolute; bottom: 0; left: 0; right: 0; }
+
+    .body { padding: 40px 52px 48px; }
+    .section { margin-bottom: 32px; }
+    .section:last-child { margin-bottom: 0; }
+    .section-label { font-size: 10.5px; font-weight: 800; letter-spacing: 2.2px; text-transform: uppercase; color: var(--primary); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1.5px solid var(--border); }
+    .summary { font-size: 14px; color: var(--text-mid); line-height: 1.78; }
+    .summary strong { color: var(--text-primary); font-weight: 600; }
+
+    .job { margin-bottom: 22px; }
+    .job:last-child { margin-bottom: 0; }
+    .job-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+    .job-company { font-size: 14.5px; font-weight: 600; color: var(--text-primary); }
+    .job-role { font-weight: 400; color: var(--text-light); }
+    .job-date { font-size: 12px; color: var(--text-light); white-space: nowrap; }
+    .job-location { font-size: 12px; color: #9ca3af; margin-bottom: 10px; font-style: italic; }
+    .job ul { padding-left: 18px; }
+    .job li { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 5px; }
+
+    .edu { margin-bottom: 14px; }
+    .edu-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .edu-degree { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+    .edu-school { font-size: 12.5px; color: var(--text-light); }
+
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tag { font-size: 11.5px; color: var(--text-mid); background: var(--bg-subtle); padding: 5px 12px; border-radius: 4px; }
+    .skill-tag.highlight { background: rgba(9,58,62,0.08); color: var(--primary); font-weight: 600; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; }
+
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: 8px; }
+    .comp-table th { text-align: left; font-weight: 600; color: var(--primary); padding: 8px 10px; border-bottom: 1.5px solid var(--border); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; background: var(--bg-subtle); }
+    .comp-table td { padding: 9px 10px; border-bottom: 1px solid var(--border); color: var(--text-mid); }
+    .comp-table tr:last-child td { border-bottom: none; }
+
+    .footer { background: var(--dark); padding: 14px 52px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--highlight); }
+    .footer-conf { font-size: 9px; color: rgba(255,255,255,0.35); }
+
+    @media print { body { background: #fff; } .page { margin: 0; box-shadow: none; } }
+    @media (max-width: 640px) { .header, .body, .footer { padding-left: 24px; padding-right: 24px; } .two-col { grid-template-columns: 1fr; } .comp-table { font-size: 11.5px; } }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-top">
+      <div class="logo-row">
+        <img src="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" alt="Sagan Passport" />
+        <div class="divider"></div>
+        <span class="logo-text">Sagan Passport</span>
+      </div>
+      <span class="confidential">Confidential</span>
+    </div>
+    <div class="name">Fahad</div>
+    <div class="headline">M&amp;A Analyst &middot; Due Diligence, QoE &amp; Fractional CFO &middot; ACCA</div>
+    <div class="meta-row">
+      <span>Pakistan &middot; Remote</span>
+      <span>Aligned to US Hours</span>
+      <span>English, Urdu</span>
+    </div>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="body">
+    <div class="section">
+      <div class="section-label">Professional Summary</div>
+      <p class="summary">
+        <strong>ACCA-qualified finance professional with 8+ years of progressive experience</strong> spanning M&amp;A due diligence, FP&amp;A, and fractional CFO services, primarily for U.S.-based clients in remote settings. Expert in <strong>QoE reporting, EBITDA normalization, financial modeling, and 13-week cash flow forecasting</strong>. Known for translating complex financial data into clear, actionable insights for founders, executives, and deal teams.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Experience Timeline</div>
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Organization</th>
+            <th>Designation</th>
+            <th>Location</th>
+            <th>From</th>
+            <th>To</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Midwest CPA (Remote)</td><td>M&amp;A Analyst</td><td>USA</td><td>Jun 2025</td><td>Present</td></tr>
+          <tr><td>Fractional CFO (Remote)</td><td>Fractional CFO</td><td>USA</td><td>Aug 2023</td><td>May 2025</td></tr>
+          <tr><td>Grant Thornton LLP</td><td>Audit Senior I</td><td>USA</td><td>Nov 2022</td><td>Jul 2023</td></tr>
+          <tr><td>Mazars M.F and Co.</td><td>Supervisor</td><td>Karachi</td><td>Oct 2021</td><td>Mar 2022</td></tr>
+          <tr><td>Grant Thornton Aldar</td><td>Audit Senior (Remote Secondment)</td><td>Riyadh</td><td>Feb 2021</td><td>Sep 2021</td></tr>
+          <tr><td>Grant Thornton Aldar</td><td>Audit Senior (Secondment)</td><td>Riyadh</td><td>Jan 2020</td><td>Jul 2020</td></tr>
+          <tr><td>Grant Thornton Qatar</td><td>Audit Senior (Remote Secondment)</td><td>Algeria / Qatar</td><td>Jul 2019</td><td>Sep 2019</td></tr>
+          <tr><td>Grant Thornton Anjum Rahman</td><td>Audit Senior</td><td>Karachi</td><td>Jan 2018</td><td>Aug 2020</td></tr>
+          <tr><td>Chase Up Pakistan</td><td>Internal Audit Trainee</td><td>Karachi</td><td>Sep 2017</td><td>Jan 2018</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Role Detail &mdash; M&amp;A Analyst (Midwest CPA)</div>
+      <p class="summary" style="margin-bottom:12px;">M&amp;A Analyst experienced in financial due diligence for <strong>$1M–$20M transactions</strong> across Food &amp; Beverage, HVAC, and Real Estate, with expertise in QoE, EBITDA normalization, and working capital analysis.</p>
+      <div class="job">
+        <ul>
+          <li>Performed <strong>financial due diligence</strong> on transactions ranging from $1M to $20M across Food &amp; Beverage, HVAC, and Real Estate.</li>
+          <li>Prepared <strong>Quality of Earnings (QoE) reports</strong>, including EBITDA normalization and detailed addback analysis to assess sustainable earnings.</li>
+          <li>Built <strong>EBITDA bridges</strong>, reconciling reported to adjusted EBITDA and identifying key earnings drivers.</li>
+          <li>Conducted revenue analysis including seasonality, customer concentration, and revenue distribution, highlighting revenue stability and risks.</li>
+          <li>Analyzed gross margin trends and cost structures to evaluate profitability and operational efficiency.</li>
+          <li>Performed <strong>net working capital (NWC) analysis</strong> and supported working capital peg assessments for transaction negotiations.</li>
+          <li>Evaluated cash conversion cycle and prepared <strong>proof of cash</strong>, ensuring accuracy and integrity of cash flows.</li>
+          <li>Assessed free cash flow (FCF) generation to support valuation and deal structuring.</li>
+          <li>Executed detailed AR, AP, and inventory analysis, identifying aging issues and working capital risks.</li>
+          <li>Performed payroll and tax tie-outs to validate financial accuracy and consistency.</li>
+          <li>Reviewed lease agreements and contractual obligations to identify financial exposures and hidden liabilities.</li>
+          <li>Managed <strong>weekly cash flow forecasts for 12 clients</strong>, supporting short-term liquidity planning.</li>
+          <li>Developed and maintained dynamic operating / financial models for 7 clients, including scenario and sensitivity analysis.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Role Detail &mdash; Fractional CFO</div>
+      <p class="summary" style="margin-bottom:12px;">Provided fractional CFO services to <strong>8 affiliated companies</strong> operating under a single parent group. End-to-end financial management, strategic planning, reporting, and cash flow oversight.</p>
+      <div class="job">
+        <ul>
+          <li>Managed monthly closures in <strong>QuickBooks Online</strong>, delivering full financial statements (P&amp;L, Balance Sheet, Cash Flow).</li>
+          <li>Developed and maintained detailed financial models, annual budgets, and rolling forecasts.</li>
+          <li>Led cash flow planning and optimized working capital to support business operations.</li>
+          <li>Implemented internal controls and improved accuracy and timeliness of financial reporting.</li>
+          <li>Advised founders and executives on <strong>investment appraisal, cost reduction, and exit strategies</strong>.</li>
+          <li>Designed financial dashboards and KPIs to monitor business performance and support data-driven decisions.</li>
+          <li>Delivered ad-hoc reports and financial insights tailored to management needs.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Role Detail &mdash; Audit &amp; Assurance (Grant Thornton)</div>
+      <p class="summary" style="margin-bottom:12px;">Handled multiple audit and non-audit engagements simultaneously across four Grant Thornton offices (USA, Karachi, Riyadh, Qatar / Algeria).</p>
+      <div class="job">
+        <ul>
+          <li>Led planning and execution of <strong>multiple audit engagements</strong>, ensuring timely delivery under tight deadlines.</li>
+          <li>Developed audit programs and working papers in accordance with <strong>International Auditing Standards (IAS / ISA)</strong>.</li>
+          <li>Evaluated internal controls, identified deficiencies, and provided actionable recommendations to management.</li>
+          <li>Supervised and reviewed team deliverables, ensuring accuracy and resolution of audit findings.</li>
+          <li>Coordinated with cross-functional teams (tax, IT, legal) to support complex audit engagements.</li>
+          <li>Delivered audit reports and management letters, highlighting key risks and control improvements.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Role Detail &mdash; Financial Advisory (Mazars)</div>
+      <div class="job">
+        <ul>
+          <li>Supported <strong>M&amp;A and financial advisory engagements</strong>, including financial modeling and business planning.</li>
+          <li>Developed financial models and forecasts, supporting strategic and investment decisions.</li>
+          <li>Analyzed client financial performance and provided insights to improve profitability and efficiency.</li>
+          <li>Assisted clients in budgeting, planning, and financial strategy execution.</li>
+          <li>Coordinated with external stakeholders including advisors, valuers, and consultants.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-label">Core Competencies</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">QoE Reporting</span>
+          <span class="skill-tag highlight">EBITDA Normalization</span>
+          <span class="skill-tag highlight">SDE Analysis</span>
+          <span class="skill-tag highlight">Financial Due Diligence</span>
+          <span class="skill-tag highlight">NWC Analysis</span>
+          <span class="skill-tag highlight">Cash Flow &amp; FCF</span>
+          <span class="skill-tag">CIM Review</span>
+          <span class="skill-tag">3-Statement Modeling</span>
+          <span class="skill-tag">Operating Models</span>
+          <span class="skill-tag">13-Week Cash Flow</span>
+          <span class="skill-tag">Budgeting &amp; Scenario Analysis</span>
+          <span class="skill-tag">IFRS</span>
+          <span class="skill-tag">GAAP</span>
+          <span class="skill-tag">Internal Controls</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Tools &amp; Platforms</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Advanced Excel (Pivot, Power Query, XLOOKUP, VBA)</span>
+          <span class="skill-tag highlight">Power BI</span>
+          <span class="skill-tag">QuickBooks Online</span>
+          <span class="skill-tag">SAP</span>
+          <span class="skill-tag">Oracle</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Certifications &amp; Languages</div>
+      <div class="skill-tags">
+        <span class="skill-tag highlight">ACCA &mdash; Qualified</span>
+        <span class="skill-tag highlight">English &mdash; Professional</span>
+        <span class="skill-tag">Urdu &mdash; Native</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-logo">Sagan Passport</span>
+    <span class="footer-conf">Confidential &middot; M&amp;A / Finance Search &middot; Batch 1 &middot; April 23, 2026</span>
+  </div>
+</div>
+</body>
+</html>

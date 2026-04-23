@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manoj &mdash; Resume | Sagan Passport</title>
+  <link rel="icon" type="image/png" href="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #093a3e;
+      --primary-dark: #06282b;
+      --highlight: #d4c79c;
+      --dark: #0e1014;
+      --bg-page: #f3f2ec;
+      --bg-card: #fafaf7;
+      --bg-subtle: #e5e2d3;
+      --text-primary: #0e1014;
+      --text-mid: #3a3a3a;
+      --text-light: #6b6b6b;
+      --border: rgba(14,16,20,0.12);
+      --font-display: 'Fraunces', Georgia, serif;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg-page); color: var(--text-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 860px; margin: 40px auto; background: #fff; box-shadow: 0 1px 8px rgba(14,16,20,0.08); border-radius: 4px; overflow: hidden; }
+    .header { background: var(--dark); padding: 44px 52px 38px; position: relative; color: #fff; }
+    .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; }
+    .logo-row { display: flex; align-items: center; gap: 10px; }
+    .logo-row img { height: 22px; }
+    .logo-row .divider { width: 1px; height: 18px; background: rgba(255,255,255,0.2); }
+    .logo-text { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--highlight); }
+    .confidential { font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 1.5px; text-transform: uppercase; }
+    .name { font-family: var(--font-display); font-size: 38px; font-weight: 600; color: #fff; margin-bottom: 8px; letter-spacing: -0.02em; }
+    .headline { font-size: 14.5px; color: rgba(255,255,255,0.75); margin-bottom: 18px; line-height: 1.55; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; color: rgba(255,255,255,0.7); }
+    .meta-row span { display: flex; align-items: center; gap: 6px; }
+    .accent-bar { height: 3px; background: linear-gradient(90deg, var(--highlight), var(--primary)); position: absolute; bottom: 0; left: 0; right: 0; }
+
+    .body { padding: 40px 52px 48px; }
+    .section { margin-bottom: 32px; }
+    .section:last-child { margin-bottom: 0; }
+    .section-label { font-size: 10.5px; font-weight: 800; letter-spacing: 2.2px; text-transform: uppercase; color: var(--primary); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1.5px solid var(--border); }
+    .summary { font-size: 14px; color: var(--text-mid); line-height: 1.78; }
+    .summary strong { color: var(--text-primary); font-weight: 600; }
+
+    .job { margin-bottom: 22px; }
+    .job:last-child { margin-bottom: 0; }
+    .job-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+    .job-company { font-size: 14.5px; font-weight: 600; color: var(--text-primary); }
+    .job-role { font-weight: 400; color: var(--text-light); }
+    .job-date { font-size: 12px; color: var(--text-light); white-space: nowrap; }
+    .job-location { font-size: 12px; color: #9ca3af; margin-bottom: 10px; font-style: italic; }
+    .job ul { padding-left: 18px; }
+    .job li { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 5px; }
+
+    .edu { margin-bottom: 14px; }
+    .edu-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .edu-degree { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+    .edu-school { font-size: 12.5px; color: var(--text-light); }
+
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tag { font-size: 11.5px; color: var(--text-mid); background: var(--bg-subtle); padding: 5px 12px; border-radius: 4px; }
+    .skill-tag.highlight { background: rgba(9,58,62,0.08); color: var(--primary); font-weight: 600; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; }
+
+    .footer { background: var(--dark); padding: 14px 52px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--highlight); }
+    .footer-conf { font-size: 9px; color: rgba(255,255,255,0.35); }
+
+    @media print { body { background: #fff; } .page { margin: 0; box-shadow: none; } }
+    @media (max-width: 640px) { .header, .body, .footer { padding-left: 24px; padding-right: 24px; } .two-col { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-top">
+      <div class="logo-row">
+        <img src="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" alt="Sagan Passport" />
+        <div class="divider"></div>
+        <span class="logo-text">Sagan Passport</span>
+      </div>
+      <span class="confidential">Confidential</span>
+    </div>
+    <div class="name">Manoj</div>
+    <div class="headline">M&amp;A Analyst &middot; Private Equity &amp; Valuation &middot; CFA Charterholder</div>
+    <div class="meta-row">
+      <span>Canada &middot; Remote</span>
+      <span>EST &middot; Aligned to US Hours</span>
+      <span>English</span>
+    </div>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="body">
+    <div class="section">
+      <div class="section-label">Professional Summary</div>
+      <p class="summary">
+        Finance professional with <strong>5+ years of experience</strong> in private equity, valuation modeling, and corporate development across early-stage and middle-market sectors. Skilled at evaluating acquisition opportunities, structuring innovative financing solutions, and translating complex data into actionable insights to drive investment decisions. CFA charterholder with MBA from Heriot-Watt University.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Professional Experience</div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Isla Partners <span class="job-role">&mdash; Mergers &amp; Acquisitions Analyst</span></span>
+          <span class="job-date">Jun 2024 – Present</span>
+        </div>
+        <div class="job-location">Middle-market PE firm executing a buy-and-build strategy in the MEP sector across Puerto Rico, the DR, and the USVI</div>
+        <ul>
+          <li>Built dynamic, comprehensive <strong>LBO forecasting models</strong> incorporating multiple performance scenarios, debt schedules, long-term value drivers, detailed waterfall distributions, sponsor IRRs, and MOIC calculations to rigorously evaluate acquisition opportunities.</li>
+          <li>Developed <strong>capital plans</strong> leveraging senior and mezzanine debt structures to optimize leverage and enhance financial flexibility, while structuring creative financing solutions to align with portfolio objectives.</li>
+          <li>Authored <strong>internal reports, pitch decks, and presentations</strong> to guide leadership decision-making on potential transactions, capital allocation, and operational integration; integrated findings into investment committee materials.</li>
+          <li>Directed diligence efforts, including profitability normalization, <strong>Quality of Earnings (QoE)</strong> reviews, customer segmentation analyses, and thorough assessment of deal fit and risks.</li>
+          <li>Collaborated with external legal, financing, and advisory partners to ensure seamless execution, alignment with strategic priorities, and proactive risk mitigation.</li>
+          <li>Supported <strong>fundraising and transaction readiness</strong> by compiling performance metrics, managing data rooms, preparing investor communications, negotiating term sheets, and advising on deal structuring.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Mercatus Capital <span class="job-role">&mdash; Advisory Consultant</span></span>
+          <span class="job-date">Apr 2021 – Nov 2024</span>
+        </div>
+        <div class="job-location">Advised early-stage ventures on capital strategy on an ad-hoc basis</div>
+        <ul>
+          <li><strong>Business Model Refresh:</strong> Redesigned client's pro forma model to reflect a new Robotics-as-a-Service (RaaS) offering, incorporating revised revenue streams, pricing structures, and unit economics. Developed scenario-based forecasts to support board-level strategic planning and capital raising.</li>
+          <li><strong>Debt Financing:</strong> Led a comprehensive Business Development Bank credit application, integrating detailed pro forma financial forecasts and scenario analyses. Result: received 'scale-up' debt funding / working capital facility.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Nesta Holding Co. Ltd <span class="job-role">&mdash; Senior Investment Analyst / Strategist</span></span>
+          <span class="job-date">Apr 2015 – Nov 2019</span>
+        </div>
+        <div class="job-location">Analysis, valuation, and reporting of firm's venture capital and private equity positions</div>
+        <ul>
+          <li><strong>Excel-based modeling of prospects:</strong> Researched and forecast top-line, expense, and cashflow assumptions to create 3-statement financial pro-forma; conducted public/private comparable company analysis and discounted cash flow modeling per intrinsic value determination and IRR/MOIC projections.</li>
+          <li><strong>Investment recommendations:</strong> Prepared recommendations for board members including valuation analysis, competitive market research, financial forecast analysis, and risk analysis with mitigation strategies.</li>
+          <li><strong>Regulatory Reporting and IFC:</strong> Fulfilled all regulatory reporting and governance duties on behalf of a portfolio company; compiled quarterly interim and annual audited statements with SEDAR and CSE; implemented internal financial controls to support third-party audits and mitigate risk.</li>
+          <li><strong>Portfolio Reporting:</strong> Led quarterly NAV calculation with third-party fund appraisers for both public and private holdings; coordinated data collection, validated valuation assumptions, and ensured alignment with investment strategy.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">ECM <span class="job-role">&mdash; Advisory Consultant</span></span>
+          <span class="job-date">May 2008 – Apr 2015</span>
+        </div>
+        <div class="job-location">Advised digital startups on finance, operations, and corporate development strategy</div>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">MD Fund Management <span class="job-role">&mdash; Fund Accountant</span></span>
+          <span class="job-date">Jan 2008 – Apr 2008</span>
+        </div>
+        <div class="job-location">Prepared periodic financial reporting for MD funds and determination of NAV; capital reconciliations and resolved discrepancies.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Education</div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">Chartered Financial Analyst (CFA)</span>
+        </div>
+        <div class="edu-school">CFA Institute &middot; Investment tools, asset valuation, portfolio management, wealth planning</div>
+      </div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">Master of Business Administration (MBA)</span>
+        </div>
+        <div class="edu-school">Heriot-Watt University &middot; Financial accounting, corporate finance, business management, marketing, business law</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-label">Core Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">LBO Modeling</span>
+          <span class="skill-tag highlight">DCF &amp; Comparables</span>
+          <span class="skill-tag highlight">Quality of Earnings (QoE)</span>
+          <span class="skill-tag highlight">Waterfall &amp; IRR/MOIC</span>
+          <span class="skill-tag">Advanced MS Excel</span>
+          <span class="skill-tag">MS PowerPoint</span>
+          <span class="skill-tag">Teams, Zoom, Slack</span>
+          <span class="skill-tag">Google Workspace</span>
+          <span class="skill-tag">Regulatory Filings</span>
+          <span class="skill-tag">Offering Memorandums</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Certifications</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">CFA</span>
+          <span class="skill-tag">Canadian Securities Course</span>
+          <span class="skill-tag">CPH</span>
+          <span class="skill-tag">Derivatives Fundamentals Course</span>
+          <span class="skill-tag">BIWS Advanced Fundamentals Modeling</span>
+          <span class="skill-tag">Infrastructure Module</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Languages</div>
+      <div class="skill-tags">
+        <span class="skill-tag highlight">English &mdash; Professional</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-logo">Sagan Passport</span>
+    <span class="footer-conf">Confidential &middot; M&amp;A / Finance Search &middot; Batch 1 &middot; April 23, 2026</span>
+  </div>
+</div>
+</body>
+</html>

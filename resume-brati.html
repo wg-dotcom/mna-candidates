@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brati &mdash; Resume | Sagan Passport</title>
+  <link rel="icon" type="image/png" href="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #093a3e;
+      --primary-dark: #06282b;
+      --highlight: #d4c79c;
+      --dark: #0e1014;
+      --bg-page: #f3f2ec;
+      --bg-card: #fafaf7;
+      --bg-subtle: #e5e2d3;
+      --text-primary: #0e1014;
+      --text-mid: #3a3a3a;
+      --text-light: #6b6b6b;
+      --border: rgba(14,16,20,0.12);
+      --font-display: 'Fraunces', Georgia, serif;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg-page); color: var(--text-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 860px; margin: 40px auto; background: #fff; box-shadow: 0 1px 8px rgba(14,16,20,0.08); border-radius: 4px; overflow: hidden; }
+    .header { background: var(--dark); padding: 44px 52px 38px; position: relative; color: #fff; }
+    .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; }
+    .logo-row { display: flex; align-items: center; gap: 10px; }
+    .logo-row img { height: 22px; }
+    .logo-row .divider { width: 1px; height: 18px; background: rgba(255,255,255,0.2); }
+    .logo-text { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--highlight); }
+    .confidential { font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 1.5px; text-transform: uppercase; }
+    .name { font-family: var(--font-display); font-size: 38px; font-weight: 600; color: #fff; margin-bottom: 8px; letter-spacing: -0.02em; }
+    .headline { font-size: 14.5px; color: rgba(255,255,255,0.75); margin-bottom: 18px; line-height: 1.55; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; color: rgba(255,255,255,0.7); }
+    .accent-bar { height: 3px; background: linear-gradient(90deg, var(--highlight), var(--primary)); position: absolute; bottom: 0; left: 0; right: 0; }
+
+    .body { padding: 40px 52px 48px; }
+    .section { margin-bottom: 32px; }
+    .section:last-child { margin-bottom: 0; }
+    .section-label { font-size: 10.5px; font-weight: 800; letter-spacing: 2.2px; text-transform: uppercase; color: var(--primary); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1.5px solid var(--border); }
+    .summary { font-size: 14px; color: var(--text-mid); line-height: 1.78; }
+    .summary strong { color: var(--text-primary); font-weight: 600; }
+
+    .job { margin-bottom: 22px; }
+    .job:last-child { margin-bottom: 0; }
+    .job-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+    .job-company { font-size: 14.5px; font-weight: 600; color: var(--text-primary); }
+    .job-role { font-weight: 400; color: var(--text-light); }
+    .job-date { font-size: 12px; color: var(--text-light); white-space: nowrap; }
+    .job-location { font-size: 12px; color: #9ca3af; margin-bottom: 10px; font-style: italic; }
+    .job ul { padding-left: 18px; }
+    .job li { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 5px; }
+
+    .edu { margin-bottom: 14px; }
+    .edu-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .edu-degree { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+    .edu-school { font-size: 12.5px; color: var(--text-light); }
+    .edu-date { font-size: 12px; color: var(--text-light); }
+
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tag { font-size: 11.5px; color: var(--text-mid); background: var(--bg-subtle); padding: 5px 12px; border-radius: 4px; }
+    .skill-tag.highlight { background: rgba(9,58,62,0.08); color: var(--primary); font-weight: 600; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; }
+
+    .achievements li { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 6px; }
+    .achievements li strong { color: var(--text-primary); font-weight: 600; }
+
+    .footer { background: var(--dark); padding: 14px 52px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--highlight); }
+    .footer-conf { font-size: 9px; color: rgba(255,255,255,0.35); }
+
+    @media print { body { background: #fff; } .page { margin: 0; box-shadow: none; } }
+    @media (max-width: 640px) { .header, .body, .footer { padding-left: 24px; padding-right: 24px; } .two-col { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-top">
+      <div class="logo-row">
+        <img src="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" alt="Sagan Passport" />
+        <div class="divider"></div>
+        <span class="logo-text">Sagan Passport</span>
+      </div>
+      <span class="confidential">Confidential</span>
+    </div>
+    <div class="name">Brati</div>
+    <div class="headline">Valuation &amp; Investment Banking Analyst &middot; Transaction Advisory &middot; EDHEC MIF</div>
+    <div class="meta-row">
+      <span>France &middot; Remote</span>
+      <span>CET &middot; Aligned to US &amp; EU Hours</span>
+      <span>English, Hindi, French</span>
+    </div>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="body">
+    <div class="section">
+      <div class="section-label">Professional Summary</div>
+      <p class="summary">
+        Finance analyst with <strong>2 years of live valuation and transaction advisory experience</strong> across <strong>30+ mandates</strong> with aggregate enterprise value exceeding €40B. Strong technical foundation in DCF, comparables, precedent transactions, and cap table analysis (OPM, PWERM, CVM). Currently pursuing a Masters in International Finance (Financial Analysis Track) at <strong>EDHEC Business School</strong>. Selected to represent his university at the global <strong>CFA Institute Research Challenge</strong>.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Education</div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">Masters in International Finance (Financial Analysis Track)</span>
+          <span class="edu-date">Jul 2025 – Present</span>
+        </div>
+        <div class="edu-school">EDHEC Business School, Nice, France &middot; Advanced Valuation, Private Equity, Financial Derivatives, M&amp;A, Portfolio Construction</div>
+      </div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">Bachelor of Commerce in Finance and Accountancy (Finance Track) &mdash; First Class</span>
+          <span class="edu-date">Jun 2020 – May 2023</span>
+        </div>
+        <div class="edu-school">Christ University, Bengaluru, India &middot; Portfolio Management, Strategic Financial Management, Investment Analysis, Commodity Markets</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Professional Experience</div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">KnowCraft Analytics <span class="job-role">&mdash; Advanced Analyst</span></span>
+          <span class="job-date">Nov 2024 – Jun 2025</span>
+        </div>
+        <div class="job-location">Outsourced financial advisory firm specializing in investment banking, valuations, transaction planning, and accounting services</div>
+        <ul>
+          <li>Analyzed and prepared <strong>company-specific and industry deep dives</strong>, integrating industry research, macroeconomic outlook, and financial analysis for strategic and transaction advisory mandates.</li>
+          <li>Researched financials, valuation, and fundamental metrics using <strong>DCF, Comparable Companies, Precedent Transactions, and Cost-based methodologies</strong> across <strong>30+ mandates with aggregate enterprise value exceeding €40B</strong>.</li>
+          <li>Built and maintained trackers and ownership analyses by constructing and reconciling <strong>cap tables</strong>, allocating equity across complex capital structures using <strong>OPM, PWERM, and CVM</strong> for early-stage and PE-backed companies.</li>
+          <li>Conducted thematic and sector research to support valuation, strategic planning, and transaction advisory across multiple industries.</li>
+          <li>Collaborated with engagement teams to support <strong>buy-side, sell-side, and financing-related advisory work</strong>, including ESOP structuring, tax planning, and fairness opinions.</li>
+          <li>Prepared client-ready reports and presentations for internal client coverage and pipeline discussions, improving turnaround time by 20%.</li>
+          <li>Supervised junior analysts across financial modeling, diligence, and presentation drafting to ensure accuracy and consistency in deliverables.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">TresVista Financial Services <span class="job-role">&mdash; Analyst</span></span>
+          <span class="job-date">Jul 2023 – Jul 2024</span>
+        </div>
+        <div class="job-location">Financial services firm supporting global PE, IB, and asset management clients with investment research, financial modeling, and valuation solutions</div>
+        <ul>
+          <li>Supported <strong>private equity and investment banking clients</strong> with investment research, financial modeling, and valuation across multiple live mandates.</li>
+          <li>Analyzed company financials and transaction scenarios including <strong>M&amp;A, recapitalizations, and restructurings</strong>, assessing leverage ratios, EBITDA adjustments, and capital structure implications.</li>
+          <li>Built detailed financial models for <strong>private debt issuers and LBO targets</strong>, supporting investment decision-making and credit analysis.</li>
+          <li>Synthesized diligence materials and credit documentation into actionable investment insights, including covenant analysis, valuation outputs, and capital structure assessments for senior stakeholders.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Christ Consulting <span class="job-role">&mdash; Consulting Intern</span></span>
+          <span class="job-date">Jun 2022 – May 2023</span>
+        </div>
+        <div class="job-location">University-affiliated consulting firm delivering research, policy analysis, financial and strategic recommendations for government and corporate clients</div>
+        <ul>
+          <li>Delivered <strong>cost optimization and policy insights</strong> through field research and data analysis across 10+ client projects, including 2 state government initiatives.</li>
+          <li>Prepared pagers, business proposals, training plans, and project proposals.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-label">Research &amp; Technical Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">S&amp;P Capital IQ</span>
+          <span class="skill-tag highlight">Bloomberg</span>
+          <span class="skill-tag highlight">PitchBook</span>
+          <span class="skill-tag highlight">Crunchbase</span>
+          <span class="skill-tag">IBISWorld</span>
+          <span class="skill-tag">BVR Stout</span>
+          <span class="skill-tag">IBM SPSS</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">MS Office</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">English &mdash; Native</span>
+          <span class="skill-tag highlight">Hindi &mdash; Native</span>
+          <span class="skill-tag">French &mdash; Intermediate</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Achievements &amp; Activities</div>
+      <ul class="achievements">
+        <li><strong>CFA Institute Research Challenge</strong> &middot; Selected to represent his master's university in the global CFA Research Challenge, delivering a full sell-side equity coverage report on French defense company <strong>Thales S.A.</strong></li>
+        <li><strong>Published Quantitative Research Thesis</strong> &middot; Grievance Redressal Mechanisms for Online Banking Frauds.</li>
+        <li><strong>Mentor, Finance and Investment Club</strong> &middot; Organized a 10,000+ student event, curated industry expert insights, judged competitions, facilitated financial literacy.</li>
+        <li><strong>Student Council Member, Christ University</strong> &middot; Planned academic curriculum, organized 5,000+ attendee events, led donation drives.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Certifications</div>
+      <div class="skill-tags">
+        <span class="skill-tag highlight">Bloomberg Market Concepts (2023)</span>
+        <span class="skill-tag highlight">Investment Management with Python and ML &mdash; EDHEC Risk Institute (2025)</span>
+        <span class="skill-tag">JP Morgan Investment Banking &mdash; Forage (2024)</span>
+        <span class="skill-tag">Advanced Valuation &amp; Strategy for M&amp;A, VC, PE &mdash; Erasmus Business School (2024)</span>
+        <span class="skill-tag">The Financial Analyst &mdash; Udemy (2022)</span>
+        <span class="skill-tag">Fundamental Analysis &mdash; Varsity Zerodha (2023)</span>
+        <span class="skill-tag">Environmental Social Governance &mdash; Bloomberg (2023)</span>
+        <span class="skill-tag">Advanced Excel &mdash; Christ University (2023)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-logo">Sagan Passport</span>
+    <span class="footer-conf">Confidential &middot; M&amp;A / Finance Search &middot; Batch 1 &middot; April 23, 2026</span>
+  </div>
+</div>
+</body>
+</html>
