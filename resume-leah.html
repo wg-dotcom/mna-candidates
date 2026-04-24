@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leah &mdash; Resume | Sagan Passport</title>
+  <link rel="icon" type="image/png" href="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #093a3e;
+      --highlight: #d4c79c;
+      --dark: #0e1014;
+      --bg-page: #f3f2ec;
+      --bg-subtle: #e5e2d3;
+      --text-primary: #0e1014;
+      --text-mid: #3a3a3a;
+      --text-light: #6b6b6b;
+      --border: rgba(14,16,20,0.12);
+      --font-display: 'Fraunces', Georgia, serif;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg-page); color: var(--text-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 860px; margin: 40px auto; background: #fff; box-shadow: 0 1px 8px rgba(14,16,20,0.08); border-radius: 4px; overflow: hidden; }
+    .header { background: var(--dark); padding: 44px 52px 38px; position: relative; color: #fff; }
+    .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; }
+    .logo-row { display: flex; align-items: center; gap: 10px; }
+    .logo-row img { height: 22px; }
+    .logo-row .divider { width: 1px; height: 18px; background: rgba(255,255,255,0.2); }
+    .logo-text { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--highlight); }
+    .confidential { font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 1.5px; text-transform: uppercase; }
+    .name { font-family: var(--font-display); font-size: 38px; font-weight: 600; color: #fff; margin-bottom: 8px; letter-spacing: -0.02em; }
+    .headline { font-size: 14.5px; color: rgba(255,255,255,0.75); margin-bottom: 18px; line-height: 1.55; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; color: rgba(255,255,255,0.7); }
+    .accent-bar { height: 3px; background: linear-gradient(90deg, var(--highlight), var(--primary)); position: absolute; bottom: 0; left: 0; right: 0; }
+    .body { padding: 40px 52px 48px; }
+    .section { margin-bottom: 32px; }
+    .section:last-child { margin-bottom: 0; }
+    .section-label { font-size: 10.5px; font-weight: 800; letter-spacing: 2.2px; text-transform: uppercase; color: var(--primary); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1.5px solid var(--border); }
+    .summary { font-size: 14px; color: var(--text-mid); line-height: 1.78; }
+    .summary strong { color: var(--text-primary); font-weight: 600; }
+    .job { margin-bottom: 22px; }
+    .job-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+    .job-company { font-size: 14.5px; font-weight: 600; color: var(--text-primary); }
+    .job-role { font-weight: 400; color: var(--text-light); }
+    .job-date { font-size: 12px; color: var(--text-light); white-space: nowrap; }
+    .job-location { font-size: 12px; color: #9ca3af; margin-bottom: 10px; font-style: italic; }
+    .job ul { padding-left: 18px; }
+    .job li { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 5px; }
+    .edu { margin-bottom: 14px; }
+    .edu-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .edu-degree { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+    .edu-school { font-size: 12.5px; color: var(--text-light); }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tag { font-size: 11.5px; color: var(--text-mid); background: var(--bg-subtle); padding: 5px 12px; border-radius: 4px; }
+    .skill-tag.highlight { background: rgba(9,58,62,0.08); color: var(--primary); font-weight: 600; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; }
+    .footer { background: var(--dark); padding: 14px 52px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--highlight); }
+    .footer-conf { font-size: 9px; color: rgba(255,255,255,0.35); }
+    @media print { body { background: #fff; } .page { margin: 0; box-shadow: none; } }
+    @media (max-width: 640px) { .header, .body, .footer { padding-left: 24px; padding-right: 24px; } .two-col { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-top">
+      <div class="logo-row">
+        <img src="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" alt="Sagan Passport" />
+        <div class="divider"></div>
+        <span class="logo-text">Sagan Passport</span>
+      </div>
+      <span class="confidential">Confidential</span>
+    </div>
+    <div class="name">Leah</div>
+    <div class="headline">Corporate Finance Analyst &middot; DCF &amp; Investment Analysis &middot; CFA Level I Candidate</div>
+    <div class="meta-row">
+      <span>Kenya &middot; Remote</span>
+      <span>EAT / Aligned to US Hours</span>
+      <span>English</span>
+    </div>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="body">
+    <div class="section">
+      <div class="section-label">Professional Summary</div>
+      <p class="summary">
+        Analytical, M&amp;A-focused <strong>Finance Analyst</strong> with experience in financial modeling, investment analysis, and infrastructure and real estate transactions. Skilled in building <strong>DCF models</strong>, conducting due diligence, and evaluating investment opportunities. Proven ability to analyze complex financial data, identify risks, and support data-driven strategic decisions in fast-paced environments. <strong>CFA Level I Candidate (2026)</strong>, FAST Standard modeling certified, Microsoft Power BI Data Analyst certified.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Professional Experience</div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Acorn Holdings Limited <span class="job-role">&mdash; Corporate Finance Analyst</span></span>
+          <span class="job-date">Jan 2025 – Present</span>
+        </div>
+        <div class="job-location">Infrastructure &amp; real estate platform, Nairobi</div>
+        <ul>
+          <li>Built financial models including <strong>DCF and scenario analysis</strong> to assess investment opportunities.</li>
+          <li>Conducted financial due diligence on infrastructure and real estate projects.</li>
+          <li>Prepared <strong>investment memos, pitchbooks, and presentations</strong> for senior management and investors.</li>
+          <li>Analyzed financial performance, risks, and returns to support strategic decisions.</li>
+          <li>Collaborated with cross-functional teams on transaction execution and reporting.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Acorn Holdings Limited <span class="job-role">&mdash; Business Development Analyst</span></span>
+          <span class="job-date">May 2024 – Dec 2024</span>
+        </div>
+        <ul>
+          <li>Conducted market and industry research to identify growth opportunities and potential investments.</li>
+          <li>Analyzed competitor positioning and financial performance to support strategic initiatives.</li>
+          <li>Developed analytical frameworks for evaluating new business opportunities.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Acorn Holdings Limited <span class="job-role">&mdash; Business Administrator</span></span>
+          <span class="job-date">Dec 2019 – Dec 2024</span>
+        </div>
+        <ul>
+          <li>Supported financial reporting, budgeting, and operational analysis across departments.</li>
+          <li>Maintained structured documentation and reporting systems for business performance tracking.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Acorn Holdings Limited <span class="job-role">&mdash; Finance Intern / Management Trainee Associate</span></span>
+          <span class="job-date">Feb 2021 – Feb 2022</span>
+        </div>
+        <ul>
+          <li>Assisted in financial analysis, reconciliations, and preparation of financial reports.</li>
+          <li>Supported accounts receivable tracking and cash flow analysis.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Education</div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">Bachelor of Business Management (Banking &amp; Finance)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-label">Core Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Financial Modeling (DCF, Valuation)</span>
+          <span class="skill-tag highlight">Investment Analysis</span>
+          <span class="skill-tag highlight">Due Diligence</span>
+          <span class="skill-tag">Market Research</span>
+          <span class="skill-tag">Financial Reporting</span>
+          <span class="skill-tag">Risk Analysis</span>
+          <span class="skill-tag">Corporate Finance</span>
+          <span class="skill-tag">Data Validation</span>
+          <span class="skill-tag">Stakeholder Communication</span>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-label">Technical &amp; Certifications</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Excel (Advanced Financial Modeling)</span>
+          <span class="skill-tag highlight">Power BI</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Python (In Progress)</span>
+          <span class="skill-tag">SAGE ERP</span>
+          <span class="skill-tag highlight">CFA Level I Candidate (2026)</span>
+          <span class="skill-tag highlight">Financial Modelling &amp; Valuation (FAST Standard)</span>
+          <span class="skill-tag">Microsoft Power BI Data Analyst</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-logo">Sagan Passport</span>
+    <span class="footer-conf">Confidential &middot; M&amp;A / Finance Search &middot; Batch 2 &middot; April 24, 2026</span>
+  </div>
+</div>
+</body>
+</html>

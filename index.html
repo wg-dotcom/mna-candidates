@@ -68,6 +68,15 @@
     .batch-pill { display: inline-flex; align-items: center; gap: 10px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; padding: 8px 20px; font-size: 13px; color: var(--text-light); }
     .batch-num { font-weight: 700; color: var(--primary); }
 
+    .batch-switcher { display: flex; justify-content: center; align-items: center; gap: 10px; margin: 28px auto 8px; max-width: 820px; padding: 0 24px; flex-wrap: wrap; }
+    .batch-btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border: 2px solid var(--border); border-radius: 10px; background: var(--bg-card); font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--text-light); cursor: pointer; transition: all 0.2s ease; }
+    .batch-btn:hover { border-color: var(--primary); color: var(--text-primary); }
+    .batch-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .batch-btn .batch-label-sub { font-weight: 400; font-size: 12px; opacity: 0.7; }
+    .batch-count { display: inline-flex; align-items: center; justify-content: center; min-width: 24px; height: 24px; padding: 0 7px; border-radius: 100px; background: var(--primary); color: #fff; font-size: 11px; font-weight: 700; }
+    .batch-btn.active .batch-count { background: var(--highlight); color: var(--dark); }
+    .batch-panel.hidden { display: none; }
+
     .section-label { text-align: center; padding: 32px 24px 28px; }
     .section-label h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: var(--text-primary); margin-bottom: 6px; }
     .section-label p { font-size: 15px; color: var(--text-light); }
@@ -207,6 +216,22 @@
       </div>
     </div>
   </section>
+
+  <div class="batch-switcher" role="tablist" aria-label="Candidate batches">
+    <button class="batch-btn active" onclick="showBatch(1)" data-batch="1" type="button">
+      <span>Batch 1 <span class="batch-label-sub">&middot; Apr 23</span></span>
+      <span class="batch-count">4</span>
+    </button>
+    <button class="batch-btn" onclick="showBatch(2)" data-batch="2" type="button">
+      <span>Batch 2 <span class="batch-label-sub">&middot; Apr 24</span></span>
+      <span class="batch-count">3</span>
+    </button>
+  </div>
+
+  <!-- ================================================================
+       BATCH 1
+  ================================================================= -->
+  <div id="batch-1" class="batch-panel">
 
   <div class="batch-info">
     <div class="batch-pill">
@@ -756,6 +781,406 @@
     </div>
   </div>
 
+  </div><!-- /batch-1 -->
+
+  <!-- ================================================================
+       BATCH 2
+  ================================================================= -->
+  <div id="batch-2" class="batch-panel hidden">
+
+    <div class="batch-info">
+      <div class="batch-pill">
+        <span class="batch-num">Batch 2</span>
+        April 24, 2026
+      </div>
+    </div>
+
+    <div class="section-label">
+      <h2>Batch 2 &middot; Additional Profiles</h2>
+      <p>Two additional candidates sourced to widen the top and bottom of the rate range.</p>
+    </div>
+
+    <div class="candidates">
+
+      <!-- =================== 5. LEAH =================== -->
+      <div class="card featured">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar featured-avatar">L</div>
+            <div>
+              <div class="card-name">Leah</div>
+              <div class="card-location">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Kenya &middot; 5 yrs Corp Finance &middot; CFA L1 Candidate
+              </div>
+              <div class="card-badges">
+                <span class="badge badge-featured">Junior Pick</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-rate">
+            <div class="card-rate-amount">$2,200/mo</div>
+            <div class="card-rate-period">USD / Month</div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="card-narrative">
+            Leah is the junior M&amp;A profile. Currently <strong>Corporate Finance Analyst at Acorn Holdings Limited</strong>, a major infrastructure and real estate platform out of Nairobi, where she has spent the last five years climbing from intern through Business Administrator, Business Development Analyst, and now Corporate Finance Analyst. Builds <strong>DCF and scenario models</strong>, runs due diligence on infrastructure and real estate deals, and writes investment memos for senior management. <strong>CFA Level I candidate (2026)</strong>, FAST Standard modeling certified.
+          </div>
+
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">Corporate Finance Analyst</div>
+                <div class="exp-company">Acorn Holdings Limited &middot; Jan 2025 – Present</div>
+                <div class="exp-highlight">Builds DCF and scenario analysis models for investment opportunities. Runs financial due diligence on infrastructure and real estate projects. Prepares investment memos, pitchbooks, and senior management presentations. Supports transaction execution and reporting across cross-functional teams.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">Business Development Analyst</div>
+                <div class="exp-company">Acorn Holdings Limited &middot; May 2024 – Dec 2024</div>
+                <div class="exp-highlight">Market and industry research for growth opportunities and potential investments. Competitor positioning and financial performance analysis. Built analytical frameworks for evaluating new business opportunities.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">Business Administrator</div>
+                <div class="exp-company">Acorn Holdings Limited &middot; Dec 2019 – Dec 2024</div>
+                <div class="exp-highlight">Financial reporting, budgeting, and operational analysis across departments. Maintained documentation and reporting systems for business performance tracking.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">Finance Intern / Management Trainee Associate</div>
+                <div class="exp-company">Acorn Holdings Limited &middot; Feb 2021 – Feb 2022</div>
+                <div class="exp-highlight">Financial analysis, reconciliations, preparation of financial reports. Accounts receivable tracking and cash flow analysis.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-section-title">Technical Stack</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">DCF &amp; Scenario Modeling</span>
+            <span class="ctag ctag-key">Due Diligence</span>
+            <span class="ctag ctag-key">Investment Memos &amp; Pitchbooks</span>
+            <span class="ctag ctag-key">Advanced Excel (FAST Standard)</span>
+            <span class="ctag ctag-key">Power BI</span>
+            <span class="ctag">SQL</span>
+            <span class="ctag">Python (in progress)</span>
+            <span class="ctag">SAGE ERP</span>
+            <span class="ctag">Market Research</span>
+          </div>
+
+          <div class="card-section-title">Key Signals</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">Real DCF and due-diligence reps on live infrastructure and real estate investments.</div></div>
+            <div class="fit-item"><div class="fit-label">CFA Level I candidate (2026); FAST Standard modeling certification; Microsoft Power BI Data Analyst.</div></div>
+            <div class="fit-item"><div class="fit-label">Learner personality. Five years inside one firm, promoted across four roles. Courious and coachable.</div></div>
+          </div>
+
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">DCF &amp; Valuation Modeling</div><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Due Diligence</div><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Investment Memos / IC Materials</div><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Data &amp; BI (Power BI, SQL)</div><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Sell-Side IB Process</div><div class="bar-track"><div class="bar-fill" style="width:45%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Coachability &amp; Growth</div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
+          </div>
+
+          <div class="card-actions">
+            <a class="action-btn btn-video" href="https://candidate-video.com/uploads/e1d91483-08af-45cd-a1d7-8e71e0f42d28" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch Intro Video
+            </a>
+            <a class="action-btn btn-resume" href="resume-leah.html" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <div class="card-recruiter-note">
+          <div class="recruiter-note-title">Recruiter Note &middot; Jesus Pacheco</div>
+          <p>Leah is the junior hire of the batch. Five years at Acorn Holdings, a serious infrastructure and real estate platform in East Africa, with clean progression from intern to Corporate Finance Analyst. Her current work already includes DCF models, due diligence, and investment memos for senior management, so she is not starting from zero. She is a CFA Level I candidate for 2026 and FAST Standard modeling certified. Her direct M&amp;A advisory experience is thinner than a pure IB or PE candidate, so the honest read is that she is best deployed as a junior analyst reporting into a senior M&amp;A lead (Manoj, Fahad, or Christian fit that role). The upside is her personality: she is a learner and openly curious, which at this rate and stage is a high-ROI bet for a firm willing to invest in a junior who will compound fast. $2,200/mo, remote-ready, EST-aligned.</p>
+        </div>
+      </div>
+
+      <!-- =================== 6. CATHERINE =================== -->
+      <div class="card">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">C</div>
+            <div>
+              <div class="card-name">Catherine</div>
+              <div class="card-location">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Philippines &middot; 26 yrs C-Suite EA &middot; ACCA Associate &amp; CFA-Certified Analyst
+              </div>
+              <div class="card-badges">
+                <span class="badge badge-featured">Finance-Fluent EA</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-rate">
+            <div class="card-rate-amount">$3,000/mo</div>
+            <div class="card-rate-period">USD / Month</div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="card-narrative">
+            Catherine is the finance-fluent EA. Her background is unusual for an EA profile: <strong>Associate Certified Chartered Accountant (ACCA, 2008)</strong> and a <strong>Certified Financial Analyst (Phoenix / ACCA Global, 2014)</strong>, on top of two Commerce degrees (Accountancy and Business Management). Three years as <strong>Financial Analyst Assistant at Weatherford Oil Tools Middle East</strong>, three more as <strong>HR / Finance Manager at David Brown Middle East</strong>. Sits above the average EA on financial task ownership: bookkeeping, reporting, account reconciliation, expense management, and RFP / proposal development.
+          </div>
+
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">Sr Executive Assistant / Admin Manager</div>
+                <div class="exp-company">Dollar Donation Club (Texas, US) &middot; Dec 2023 – Jun 2025</div>
+                <div class="exp-highlight">C-suite EA / admin support for a remote US operation. Calendar, travel, confidential comms, expense management. Stack: HubSpot, Monday.com, QuickBooks.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">Sr Executive Assistant</div>
+                <div class="exp-company">Elevated Experiences Co. (Sydney) &middot; Livetiles Global (Perth) &middot; May 2023 – Nov 2023</div>
+                <div class="exp-highlight">Remote EA support for Australian companies. RFP / RFx management end-to-end. Proposal development, compliance, and quality control.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">Sr Executive Assistant / Office Manager</div>
+                <div class="exp-company">Fiscal Note / Equilibrium (US, Singapore) &middot; Sept 2021 – Dec 2022</div>
+                <div class="exp-highlight">C-suite executive support across US and Singapore operations. Certifications in Cyber Security, Data Privacy, Global Trade Sanctions, Insider Trading compliance (Fiscal Note, 2021).</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">Financial Educator / Marketing Director</div>
+                <div class="exp-company">IMG International Marketing Group (Makati) &middot; Sept 2020 – Sept 2021</div>
+                <div class="exp-highlight">Direct financial education and client-facing investment content work.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">HR / Finance Manager</div>
+                <div class="exp-company">David Brown Middle East FZCO (Dubai) &middot; Oct 2011 – Mar 2015</div>
+                <div class="exp-highlight">Dual HR / Finance remit. UK Group Finance and HSBC online. S&amp;OP Training with David Brown UK Global Finance Department (2014). Negotiated supplier contracts saving significant cost.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">Financial Analyst Assistant</div>
+                <div class="exp-company">Weatherford Oil Tools Middle East (Dubai) &middot; Nov 2007 – Sept 2010</div>
+                <div class="exp-highlight">Promoted from Payroll to Financial Reporting in 3 months. Hyperion Essbase financial analysis software. Orbit Payroll. Foundation for later ACCA / CFA work.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-section-title">Financial &amp; Business Skills</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">ACCA Associate</span>
+            <span class="ctag ctag-key">Certified Financial Analyst</span>
+            <span class="ctag ctag-key">Financial Reporting &amp; Bookkeeping</span>
+            <span class="ctag ctag-key">Account Reconciliation</span>
+            <span class="ctag ctag-key">Budgeting &amp; Expense Management</span>
+            <span class="ctag ctag-key">RFP / RFx Management</span>
+            <span class="ctag">Proposal Development</span>
+            <span class="ctag">Project Management</span>
+            <span class="ctag">QuickBooks, NetSuite, Xero</span>
+            <span class="ctag">Salesforce, HubSpot, Monday.com</span>
+            <span class="ctag">Hyperion Essbase (prior)</span>
+          </div>
+
+          <div class="card-section-title">Key Signals</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label">ACCA Associate + Certified Financial Analyst. Two Commerce degrees (Accountancy &amp; Business Management).</div></div>
+            <div class="fit-item"><div class="fit-label">Six years combined in finance-first roles (Weatherford Financial Analyst + David Brown HR/Finance Manager) before moving to EA work.</div></div>
+            <div class="fit-item"><div class="fit-label">Remote experience supporting US and Australian companies. Certifications in data privacy, cyber security, insider trading compliance.</div></div>
+          </div>
+
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Finance Ops / Bookkeeping</div><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Executive Support / C-Suite</div><div class="bar-track"><div class="bar-fill" style="width:95%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">RFP / Proposal Development</div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Compliance &amp; Data Privacy</div><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">M&amp;A Deal Modeling</div><div class="bar-track"><div class="bar-fill" style="width:40%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Tooling Breadth (50+ systems)</div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
+          </div>
+
+          <div class="card-actions">
+            <a class="action-btn btn-video" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/677bc7cf-bfae-4237-a209-b743a74606bd" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch Intro Video
+            </a>
+            <a class="action-btn btn-resume" href="resume-catherine.html" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <div class="card-recruiter-note">
+          <div class="recruiter-note-title">Recruiter Note &middot; Jesus Pacheco</div>
+          <p>Catherine is a different kind of profile than the rest of this batch and worth reading on her own terms. She is a 26-year C-suite Executive Assistant, but her finance credentials are the interesting part: ACCA Associate, Certified Financial Analyst, two Commerce degrees (Accountancy and Business Management), and six years in dedicated finance roles (Weatherford Financial Analyst, David Brown HR / Finance Manager) before pivoting to full-time EA work. If the role you are trying to fill sits at the intersection of <strong>executive support and finance operations</strong>, Chief of Staff adjacent, someone who can own the principal's calendar and also clean up QuickBooks, run a bookkeeping cadence, manage an RFP pipeline, and sit in on investor or capital-raise touchpoints without getting lost, she is a high-trust hire. She is not going to build an LBO model. She will run the back office of an M&amp;A practice with finance literacy most EAs do not have. $3,000/mo, US-hour experienced, fully remote.</p>
+        </div>
+      </div>
+
+      <!-- =================== 7. SANTIAGO =================== -->
+      <div class="card">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">S</div>
+            <div>
+              <div class="card-name">Santiago</div>
+              <div class="card-location">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Argentina &middot; 3+ yrs Corporate Risk &middot; UBA Economics &middot; Trilingual
+              </div>
+              <div class="card-badges">
+                <span class="badge badge-featured">Transferable Skills</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-rate">
+            <div class="card-rate-amount">$2,000/mo</div>
+            <div class="card-rate-period">USD / Month</div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="card-narrative">
+            Santiago is the analytical, finance-adjacent profile with the clearest translation path into M&amp;A. Economics graduate from the <strong>University of Buenos Aires</strong> with 3+ years at <strong>American Express</strong>, where he was promoted to <strong>Subject Matter Expert for the Nordic corporate portfolio</strong>. Led a 2024-2025 audit remediation project covering <strong>300+ multinational clients</strong>, finishing it in a record one-year timeframe. Strong quantitative foundation (R econometrics), advanced Excel dashboards, active capital markets and DeFi research as a personal practice. Trilingual: Spanish, English, German.
+          </div>
+
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">Subject Matter Expert (SME) &mdash; Corporate Nordics</div>
+                <div class="exp-company">American Express &middot; 2023 – Present</div>
+                <div class="exp-highlight">Led the 2024-2025 Corporate Audit remediation for 300+ multinational clients in a record 1-year timeframe. Primary technical liaison between Compliance, Internal/External Audit, and Business units. Trained 10+ team members and external partners on data integrity, risk reporting, and corporate due diligence. Improved operational workflows for the Nordic market by closing information gaps in high-exposure corporate accounts.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">KYC Analyst &mdash; Global Services</div>
+                <div class="exp-company">American Express &middot; 2022 – 2023</div>
+                <div class="exp-highlight">End-to-end Due Diligence for a portfolio of 100+ large-cap multinational corporations. Reconciled sensitive financial data in Salesforce and internal analytical tools, maintaining "low-error" standards for corporate risk reporting.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div></div>
+              <div class="exp-content">
+                <div class="exp-role">Sales Team Member</div>
+                <div class="exp-company">MayoristaNet &middot; 2021 – 2022</div>
+                <div class="exp-highlight">Face-to-face client acquisition and lead generation within assigned territories.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-section-title">Technical Stack</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Advanced Excel (Dashboards)</span>
+            <span class="ctag ctag-key">R (Econometrics)</span>
+            <span class="ctag ctag-key">KPI &amp; KRI Reporting</span>
+            <span class="ctag ctag-key">Corporate Due Diligence</span>
+            <span class="ctag ctag-key">Audit Remediation</span>
+            <span class="ctag">Salesforce</span>
+            <span class="ctag">SQL (in progress)</span>
+            <span class="ctag">Power BI (in progress)</span>
+            <span class="ctag">DeFi / On-chain Research</span>
+          </div>
+
+          <div class="card-section-title">Key Signals &middot; Why the Skills Transfer</div>
+          <div class="fit-grid">
+            <div class="fit-item"><div class="fit-label"><strong>Due diligence rep volume.</strong> Ran KYC diligence on 100+ large-cap multinationals and audit remediation on 300+ Nordic corporate accounts. Every M&amp;A shop runs the same muscle: document gathering, data integrity, risk flags, remediation.</div></div>
+            <div class="fit-item"><div class="fit-label"><strong>Quantitative foundation.</strong> UBA Economics degree plus R econometrics projects. The analytical rigor for financial modeling is there; LBO / DCF specifics are trainable in weeks, not years.</div></div>
+            <div class="fit-item"><div class="fit-label"><strong>Stakeholder-heavy operating model.</strong> Already acts as the primary liaison between Compliance, Audit, and Business at Amex. That is the same coordination pattern an M&amp;A Analyst runs between deal team, counsel, diligence providers, and the target.</div></div>
+          </div>
+
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            <div class="bar-item"><div class="bar-label">Financial Analysis &amp; Risk Reporting</div><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Due Diligence Process</div><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Stakeholder Management</div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Quantitative / Econometrics</div><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Multilingual (ES / EN / DE)</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+            <div class="bar-item"><div class="bar-label">Direct M&amp;A Modeling (LBO, QoE)</div><div class="bar-track"><div class="bar-fill" style="width:40%"></div></div></div>
+          </div>
+
+          <div class="card-actions">
+            <a class="action-btn btn-video" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/9ef0fa66-58f6-44ed-838c-dc94e36d57b3" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch Intro Video
+            </a>
+            <a class="action-btn btn-resume" href="resume-santiago.html" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <div class="card-recruiter-note">
+          <div class="recruiter-note-title">Recruiter Note &middot; Jesus Pacheco</div>
+          <p>Santiago is a sideways hire, and in this batch that is a feature, not a bug. He is not an M&amp;A Analyst today, but the skill transfer is cleaner than his title suggests. Three years at American Express running corporate risk on Nordic multinationals, promoted to SME, leading a 300-client audit remediation end-to-end. That is literally due diligence at scale: document gathering, data integrity, stakeholder coordination across Compliance, Audit, and Business. UBA Economics degree with real R econometrics projects (not just coursework) gives him the quantitative foundation for modeling. What he does not have: deal structuring, LBO builds, SBA lending specifics. Those are trainable in a few weeks on the right desk. What he does have at $2,000/mo is a trilingual (Spanish, English, German) Economics grad who already thinks like an analyst and has institutional-grade rep volume on exactly the diligence muscle M&amp;A teams need. Good ramp-up hire for a firm willing to invest 60-90 days on technical enablement.</p>
+        </div>
+      </div>
+
+    </div><!-- /candidates -->
+
+    <div class="comparison-section">
+      <div class="section-label" style="padding-bottom:20px;">
+        <h2>Batch 2 Side-by-Side</h2>
+        <p>Key criteria for the three Batch 2 profiles.</p>
+      </div>
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>Leah</th>
+              <th>Catherine</th>
+              <th>Santiago</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Location</td><td>Kenya</td><td>Philippines</td><td>Argentina</td></tr>
+            <tr><td>Profile Type</td><td>Junior M&amp;A Analyst</td><td>Finance-Fluent C-Suite EA</td><td>Corporate Risk / Diligence (transferable)</td></tr>
+            <tr><td>Experience</td><td>5 yrs Corporate Finance</td><td>26 yrs EA + 6 yrs Finance</td><td>3+ yrs Corporate Risk (Amex)</td></tr>
+            <tr><td>Current / Recent</td><td>Corporate Finance Analyst, Acorn Holdings</td><td>Sr EA / Admin Manager, Dollar Donation Club (US)</td><td>SME &mdash; Corporate Nordics, American Express</td></tr>
+            <tr><td>Sector Depth</td><td>Infrastructure, Real Estate</td><td>Cross-sector (Oil &amp; Gas, Tech, Non-profit, Hospitality)</td><td>Multinational corporate banking / risk</td></tr>
+            <tr><td>Modeling / Finance Specialty</td><td>DCF, Scenario Analysis, Diligence</td><td>Bookkeeping, Reporting, Reconciliation, RFP</td><td>Risk reporting, KYC, audit remediation, econometrics (R)</td></tr>
+            <tr><td>Credentials</td><td>CFA Level I Candidate (2026), FAST Standard</td><td>ACCA Associate, CFA (Phoenix), BSc Accountancy, BSc Bus Mgmt</td><td>B.S. Economics (UBA, 2025)</td></tr>
+            <tr><td>Tools</td><td>Excel, Power BI, SQL, Python (in progress), SAGE</td><td>QuickBooks, NetSuite, Xero, HubSpot, Monday, Salesforce, 50+ systems</td><td>Excel, R, Salesforce, SQL &amp; Power BI (in progress)</td></tr>
+            <tr><td>Languages</td><td>English</td><td>English, Tagalog</td><td>Spanish (Native), English (Advanced), German (A2)</td></tr>
+            <tr><td>Best Fit</td><td>Junior analyst reporting into a senior M&amp;A lead</td><td>Finance-fluent EA / Chief of Staff adjacent</td><td>Ramp-up analyst / diligence support with enablement</td></tr>
+            <tr><td><strong>Rate</strong></td><td><strong>$2,200/mo</strong></td><td><strong>$3,000/mo</strong></td><td><strong>$2,000/mo</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- /batch-2 -->
+
   <!-- =================== ADVISOR =================== -->
   <div class="advisor-section">
     <div class="section-label" style="padding-bottom:20px;">
@@ -778,8 +1203,19 @@
       <span class="footer-x">&times;</span>
       <img src="https://saganrecruitment.com/wp-content/uploads/2025/10/Sagan-Logo-2-e1759568299542.png" alt="Sagan" />
     </div>
-    <p>Prepared by <a href="https://saganpassport.com" target="_blank">Sagan Passport</a> &middot; M&amp;A / Finance Search &middot; Batch 1 &middot; April 23, 2026</p>
+    <p>Prepared by <a href="https://saganpassport.com" target="_blank">Sagan Passport</a> &middot; M&amp;A / Finance Search &middot; Batches 1 &amp; 2 &middot; Apr 23 – 24, 2026</p>
   </footer>
 
+  <script>
+    function showBatch(n) {
+      document.querySelectorAll('.batch-panel').forEach(function (p) { p.classList.add('hidden'); });
+      document.querySelectorAll('.batch-btn').forEach(function (b) { b.classList.remove('active'); });
+      var panel = document.getElementById('batch-' + n);
+      var btn = document.querySelector('[data-batch="' + n + '"]');
+      if (panel) panel.classList.remove('hidden');
+      if (btn) btn.classList.add('active');
+      window.scrollTo({ top: document.querySelector('.batch-switcher').offsetTop - 20, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>

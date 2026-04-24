@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catherine &mdash; Resume | Sagan Passport</title>
+  <link rel="icon" type="image/png" href="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #093a3e;
+      --highlight: #d4c79c;
+      --dark: #0e1014;
+      --bg-page: #f3f2ec;
+      --bg-subtle: #e5e2d3;
+      --text-primary: #0e1014;
+      --text-mid: #3a3a3a;
+      --text-light: #6b6b6b;
+      --border: rgba(14,16,20,0.12);
+      --font-display: 'Fraunces', Georgia, serif;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg-page); color: var(--text-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 860px; margin: 40px auto; background: #fff; box-shadow: 0 1px 8px rgba(14,16,20,0.08); border-radius: 4px; overflow: hidden; }
+    .header { background: var(--dark); padding: 44px 52px 38px; position: relative; color: #fff; }
+    .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; }
+    .logo-row { display: flex; align-items: center; gap: 10px; }
+    .logo-row img { height: 22px; }
+    .logo-row .divider { width: 1px; height: 18px; background: rgba(255,255,255,0.2); }
+    .logo-text { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--highlight); }
+    .confidential { font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 1.5px; text-transform: uppercase; }
+    .name { font-family: var(--font-display); font-size: 38px; font-weight: 600; color: #fff; margin-bottom: 8px; letter-spacing: -0.02em; }
+    .headline { font-size: 14.5px; color: rgba(255,255,255,0.75); margin-bottom: 18px; line-height: 1.55; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; color: rgba(255,255,255,0.7); }
+    .accent-bar { height: 3px; background: linear-gradient(90deg, var(--highlight), var(--primary)); position: absolute; bottom: 0; left: 0; right: 0; }
+    .body { padding: 40px 52px 48px; }
+    .section { margin-bottom: 32px; }
+    .section:last-child { margin-bottom: 0; }
+    .section-label { font-size: 10.5px; font-weight: 800; letter-spacing: 2.2px; text-transform: uppercase; color: var(--primary); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1.5px solid var(--border); }
+    .summary { font-size: 14px; color: var(--text-mid); line-height: 1.78; }
+    .summary strong { color: var(--text-primary); font-weight: 600; }
+    .job { margin-bottom: 22px; }
+    .job-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+    .job-company { font-size: 14.5px; font-weight: 600; color: var(--text-primary); }
+    .job-role { font-weight: 400; color: var(--text-light); }
+    .job-date { font-size: 12px; color: var(--text-light); white-space: nowrap; }
+    .job-location { font-size: 12px; color: #9ca3af; margin-bottom: 10px; font-style: italic; }
+    .job ul { padding-left: 18px; }
+    .job li { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 5px; }
+    .edu { margin-bottom: 14px; }
+    .edu-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .edu-degree { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+    .edu-school { font-size: 12.5px; color: var(--text-light); }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tag { font-size: 11.5px; color: var(--text-mid); background: var(--bg-subtle); padding: 5px 12px; border-radius: 4px; }
+    .skill-tag.highlight { background: rgba(9,58,62,0.08); color: var(--primary); font-weight: 600; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; }
+    .callout { background: rgba(9,58,62,0.05); border-left: 3px solid var(--primary); padding: 16px 20px; border-radius: 0 8px 8px 0; margin-top: 6px; }
+    .callout p { font-size: 13.5px; color: var(--text-mid); line-height: 1.7; }
+    .callout strong { color: var(--text-primary); }
+    .footer { background: var(--dark); padding: 14px 52px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--highlight); }
+    .footer-conf { font-size: 9px; color: rgba(255,255,255,0.35); }
+    @media print { body { background: #fff; } .page { margin: 0; box-shadow: none; } }
+    @media (max-width: 640px) { .header, .body, .footer { padding-left: 24px; padding-right: 24px; } .two-col { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-top">
+      <div class="logo-row">
+        <img src="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" alt="Sagan Passport" />
+        <div class="divider"></div>
+        <span class="logo-text">Sagan Passport</span>
+      </div>
+      <span class="confidential">Confidential</span>
+    </div>
+    <div class="name">Catherine</div>
+    <div class="headline">Sr Executive Assistant / Office Manager &middot; Finance Operations &middot; ACCA Associate &amp; CFA-Certified Analyst</div>
+    <div class="meta-row">
+      <span>Philippines &middot; Remote</span>
+      <span>Aligned to US Hours</span>
+      <span>English, Tagalog</span>
+    </div>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="body">
+    <div class="section">
+      <div class="section-label">Professional Profile</div>
+      <p class="summary">
+        Highly seasoned <strong>Executive Assistant with 26 years of experience</strong> supporting C-suite executives across the Philippines, Dubai, the US, and Australia. Meticulously skilled in calendar management, intricate travel coordination, and confidential correspondence. What sets her apart from a typical EA profile is her <strong>finance credentials and 6 years in dedicated finance roles</strong> earlier in her career.
+      </p>
+      <div class="callout">
+        <p>
+          <strong>Finance &amp; Business Background:</strong> Associate Certified Chartered Accountant (<strong>ACCA Global</strong>, 2008) &middot; <strong>Certified Financial Analyst</strong> (Phoenix / ACCA Global, 2014) &middot; BSc Commerce in Accountancy (1998) &middot; BSc Commerce in Business Management (2007) &middot; 3 yrs Financial Analyst Assistant at Weatherford Oil Tools (Dubai) &middot; 3 yrs HR / Finance Manager at David Brown Middle East (Dubai).
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Executive &amp; Admin Experience</div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Dollar Donation Club <span class="job-role">&mdash; Sr Executive Assistant / Admin Manager</span></span>
+          <span class="job-date">Dec 2023 – Jun 2025</span>
+        </div>
+        <div class="job-location">Texas, US &middot; Remote</div>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Elevated Experiences Co. / Livetiles Global <span class="job-role">&mdash; Sr Executive Assistant</span></span>
+          <span class="job-date">May 2023 – Nov 2023</span>
+        </div>
+        <div class="job-location">Sydney &amp; Perth, Australia &middot; Remote</div>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Fiscal Note / Equilibrium <span class="job-role">&mdash; Sr Executive Assistant / Office Manager</span></span>
+          <span class="job-date">Sept 2021 – Dec 2022</span>
+        </div>
+        <div class="job-location">US, Singapore</div>
+        <ul>
+          <li><strong>Calendar &amp; Email Management:</strong> Organized meetings, prioritized executive communications, and maintained confidential correspondence.</li>
+          <li><strong>RFP / RFx Management:</strong> Oversaw entire process for RFPs, RFIs, and RFQs from initial request to final submission.</li>
+          <li><strong>Expense Management:</strong> Monitored and tracked executive expenses with budget adherence and financial accountability using multiple software tools.</li>
+          <li><strong>Proposal Development &amp; Compliance:</strong> Drafted and finalized proposal responses aligned with client requirements and internal quality, accuracy, and branding standards.</li>
+          <li>Certifications in Cyber Security, Data Privacy, Global Trade Sanctions, Insider Trading (Fiscal Note, 2021).</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">IMG International Marketing Group <span class="job-role">&mdash; Financial Educator / Marketing Director</span></span>
+          <span class="job-date">Sept 2020 – Sept 2021</span>
+        </div>
+        <div class="job-location">Makati, Philippines</div>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Al Habtoor Group <span class="job-role">&mdash; HR Director Asst, Talent Acquisition</span></span>
+          <span class="job-date">Nov 2015 – Apr 2018</span>
+        </div>
+        <div class="job-location">Dubai, U.A.E. &middot; Head Office</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Finance &amp; Business Roles</div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">David Brown Middle East FZCO <span class="job-role">&mdash; HR / Finance Manager</span></span>
+          <span class="job-date">Oct 2011 – Mar 2015</span>
+        </div>
+        <div class="job-location">Dubai, U.A.E.</div>
+        <ul>
+          <li>Dual HR and Finance remit for the Middle East operation.</li>
+          <li><strong>UK Group Finance</strong> and HSBC online; re-designed offer letter, employment contract, and employee manual.</li>
+          <li><strong>S&amp;OP Training</strong> with David Brown UK Global &mdash; Finance Department (Feb 2014).</li>
+          <li>Negotiated with suppliers to reduce costs, contributing to <strong>50% profit improvement</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Wurth Gulf FZCO <span class="job-role">&mdash; Executive Assistant to CEO</span></span>
+          <span class="job-date">Nov 2010 – Oct 2011</span>
+        </div>
+        <div class="job-location">Dubai, U.A.E.</div>
+        <ul>
+          <li>Internal and External Sales and Products training (Mar 2011); Internal Sales Force reporting.</li>
+          <li>Administration Roster for all employees on weekly and monthly reporting cadence.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">Weatherford Oil Tools Middle East <span class="job-role">&mdash; Financial Analyst Assistant</span></span>
+          <span class="job-date">Nov 2007 – Sept 2010</span>
+        </div>
+        <div class="job-location">Dubai, U.A.E.</div>
+        <ul>
+          <li><strong>Promoted from Payroll to Financial Reporting Department in 3 months</strong>, recognized for excellence in Excel and Microsoft Office.</li>
+          <li>Orbit Software (Payroll Department, Feb 2008); <strong>Hyperion Essbase Reports</strong> &mdash; Financial Analysis and Reporting Dept (Jun 2008).</li>
+          <li>Foundation for later <strong>ACCA (2008)</strong> and <strong>Certified Financial Analyst (2014)</strong> study and certifications.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Education &amp; Qualifications</div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">Certified Financial Analyst</span>
+          <span class="job-date">2014</span>
+        </div>
+        <div class="edu-school">Phoenix &middot; ACCA Global, UK Based (Dubai, U.A.E)</div>
+      </div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">Associate Certified Chartered Accountant</span>
+          <span class="job-date">2008</span>
+        </div>
+        <div class="edu-school">Phoenix &middot; ACCA Global, UK Based (Dubai, U.A.E)</div>
+      </div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">Bachelor of Science in Commerce &mdash; Major in Business Management</span>
+          <span class="job-date">2007</span>
+        </div>
+        <div class="edu-school">University of Batangas, Philippines</div>
+      </div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">Bachelor of Science in Commerce &mdash; Major in Accountancy</span>
+          <span class="job-date">1998</span>
+        </div>
+        <div class="edu-school">University of Batangas, Philippines</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-label">Financial &amp; Business Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Financial Reporting &amp; Bookkeeping</span>
+          <span class="skill-tag highlight">Account Reconciliation</span>
+          <span class="skill-tag highlight">Budgeting &amp; Expense Management</span>
+          <span class="skill-tag highlight">RFP / RFx Management</span>
+          <span class="skill-tag">Proposal Development</span>
+          <span class="skill-tag">Compliance &amp; Quality Control</span>
+          <span class="skill-tag">Data Analysis</span>
+          <span class="skill-tag">Project Management</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Executive Support Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">C-Suite Calendar Management</span>
+          <span class="skill-tag highlight">Travel Coordination</span>
+          <span class="skill-tag highlight">Confidential Correspondence</span>
+          <span class="skill-tag">Prioritization &amp; Workflow</span>
+          <span class="skill-tag">Document Management</span>
+          <span class="skill-tag">Email Communication</span>
+          <span class="skill-tag">Emotional Intelligence</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Technology &amp; Systems</div>
+      <div class="skill-tags">
+        <span class="skill-tag highlight">QuickBooks</span>
+        <span class="skill-tag highlight">NetSuite</span>
+        <span class="skill-tag highlight">Xero</span>
+        <span class="skill-tag highlight">Hyperion Essbase (prior)</span>
+        <span class="skill-tag">Salesforce</span>
+        <span class="skill-tag">HubSpot</span>
+        <span class="skill-tag">Monday.com</span>
+        <span class="skill-tag">Oracle &middot; JD Edwards</span>
+        <span class="skill-tag">SAP / SapphireOne</span>
+        <span class="skill-tag">Microsoft 365 &middot; Google Workspace</span>
+        <span class="skill-tag">Asana &middot; Trello &middot; Jira</span>
+        <span class="skill-tag">Zoom &middot; Slack &middot; MS Teams</span>
+        <span class="skill-tag">DocuSign &middot; HelloSign</span>
+        <span class="skill-tag">Expensify &middot; TravelBank</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Certifications &amp; Languages</div>
+      <div class="skill-tags">
+        <span class="skill-tag highlight">Certified Financial Analyst (2014)</span>
+        <span class="skill-tag highlight">ACCA Associate (2008)</span>
+        <span class="skill-tag">HubSpot / Monday.com PM Training (2023)</span>
+        <span class="skill-tag">Fiscal Note &mdash; Cyber Security, Data Privacy, Insider Trading (2021)</span>
+        <span class="skill-tag">NEXUS Investment Training (2018)</span>
+        <span class="skill-tag">English &mdash; Professional</span>
+        <span class="skill-tag">Tagalog &mdash; Native</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-logo">Sagan Passport</span>
+    <span class="footer-conf">Confidential &middot; M&amp;A / Finance Search &middot; Batch 2 &middot; April 24, 2026</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santiago &mdash; Resume | Sagan Passport</title>
+  <link rel="icon" type="image/png" href="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #093a3e;
+      --highlight: #d4c79c;
+      --dark: #0e1014;
+      --bg-page: #f3f2ec;
+      --bg-subtle: #e5e2d3;
+      --text-primary: #0e1014;
+      --text-mid: #3a3a3a;
+      --text-light: #6b6b6b;
+      --border: rgba(14,16,20,0.12);
+      --font-display: 'Fraunces', Georgia, serif;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg-page); color: var(--text-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 860px; margin: 40px auto; background: #fff; box-shadow: 0 1px 8px rgba(14,16,20,0.08); border-radius: 4px; overflow: hidden; }
+    .header { background: var(--dark); padding: 44px 52px 38px; position: relative; color: #fff; }
+    .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; }
+    .logo-row { display: flex; align-items: center; gap: 10px; }
+    .logo-row img { height: 22px; }
+    .logo-row .divider { width: 1px; height: 18px; background: rgba(255,255,255,0.2); }
+    .logo-text { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--highlight); }
+    .confidential { font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 1.5px; text-transform: uppercase; }
+    .name { font-family: var(--font-display); font-size: 38px; font-weight: 600; color: #fff; margin-bottom: 8px; letter-spacing: -0.02em; }
+    .headline { font-size: 14.5px; color: rgba(255,255,255,0.75); margin-bottom: 18px; line-height: 1.55; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12.5px; color: rgba(255,255,255,0.7); }
+    .accent-bar { height: 3px; background: linear-gradient(90deg, var(--highlight), var(--primary)); position: absolute; bottom: 0; left: 0; right: 0; }
+    .body { padding: 40px 52px 48px; }
+    .section { margin-bottom: 32px; }
+    .section:last-child { margin-bottom: 0; }
+    .section-label { font-size: 10.5px; font-weight: 800; letter-spacing: 2.2px; text-transform: uppercase; color: var(--primary); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1.5px solid var(--border); }
+    .summary { font-size: 14px; color: var(--text-mid); line-height: 1.78; }
+    .summary strong { color: var(--text-primary); font-weight: 600; }
+    .job { margin-bottom: 22px; }
+    .job-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 2px; }
+    .job-company { font-size: 14.5px; font-weight: 600; color: var(--text-primary); }
+    .job-role { font-weight: 400; color: var(--text-light); }
+    .job-date { font-size: 12px; color: var(--text-light); white-space: nowrap; }
+    .job-location { font-size: 12px; color: #9ca3af; margin-bottom: 10px; font-style: italic; }
+    .job ul { padding-left: 18px; }
+    .job li { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 5px; }
+    .edu { margin-bottom: 14px; }
+    .edu-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .edu-degree { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+    .edu-school { font-size: 12.5px; color: var(--text-light); }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tag { font-size: 11.5px; color: var(--text-mid); background: var(--bg-subtle); padding: 5px 12px; border-radius: 4px; }
+    .skill-tag.highlight { background: rgba(9,58,62,0.08); color: var(--primary); font-weight: 600; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; }
+    .transfer-box { background: rgba(9,58,62,0.05); border-left: 3px solid var(--primary); padding: 18px 22px; border-radius: 0 8px 8px 0; margin-top: 6px; }
+    .transfer-box h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 10px; }
+    .transfer-box ul { padding-left: 18px; }
+    .transfer-box li { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 4px; }
+    .transfer-box strong { color: var(--text-primary); }
+    .footer { background: var(--dark); padding: 14px 52px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--highlight); }
+    .footer-conf { font-size: 9px; color: rgba(255,255,255,0.35); }
+    @media print { body { background: #fff; } .page { margin: 0; box-shadow: none; } }
+    @media (max-width: 640px) { .header, .body, .footer { padding-left: 24px; padding-right: 24px; } .two-col { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-top">
+      <div class="logo-row">
+        <img src="https://framerusercontent.com/images/S1c1B9DfvYAUAWhvNHvghzfQBjQ.png" alt="Sagan Passport" />
+        <div class="divider"></div>
+        <span class="logo-text">Sagan Passport</span>
+      </div>
+      <span class="confidential">Confidential</span>
+    </div>
+    <div class="name">Santiago</div>
+    <div class="headline">Corporate Risk &amp; Due Diligence SME &middot; UBA Economics &middot; Trilingual (ES / EN / DE)</div>
+    <div class="meta-row">
+      <span>Argentina &middot; Remote</span>
+      <span>ART &middot; Aligned to US &amp; EU Hours</span>
+      <span>Spanish, English, German</span>
+    </div>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="body">
+    <div class="section">
+      <div class="section-label">Professional Profile</div>
+      <p class="summary">
+        <strong>Economics graduate (UBA)</strong> with 3+ years in corporate risk operations and audit remediation at a <strong>multinational financial services company (American Express)</strong>. Promoted to <strong>Subject Matter Expert (SME) for a Nordic corporate portfolio</strong>, leading cross-functional stakeholders to deliver SLA-driven remediation at scale. Strong quantitative foundation through econometrics projects in R, with active interest in capital markets and digital assets (DeFi / on-chain research).
+      </p>
+
+      <div class="transfer-box">
+        <h4>Why the skills transfer to M&amp;A</h4>
+        <ul>
+          <li><strong>Due diligence rep volume.</strong> Managed end-to-end Due Diligence on 100+ large-cap multinational corporations (KYC Analyst) and led audit remediation across 300+ corporate accounts (SME). That is the same muscle M&amp;A teams use every day.</li>
+          <li><strong>Data integrity at institutional scale.</strong> Maintained "low-error" standards reconciling sensitive financial data in Salesforce and internal analytical tools, under regulator-facing pressure.</li>
+          <li><strong>Quantitative foundation.</strong> UBA Economics degree plus real R econometrics projects (data cleaning, modeling, interpretation). The analytical rigor for M&amp;A modeling is there; LBO / DCF specifics are trainable in weeks.</li>
+          <li><strong>Stakeholder orchestration.</strong> Primary liaison between Compliance, Internal/External Audit, and Business units. The same coordination pattern an M&amp;A Analyst runs between deal team, counsel, diligence providers, and the target.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Work Experience</div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">American Express <span class="job-role">&mdash; Subject Matter Expert (SME), Corporate Nordics</span></span>
+          <span class="job-date">2023 – Present</span>
+        </div>
+        <ul>
+          <li><strong>Strategic Audit Leadership:</strong> Led the 2024-2025 Corporate Audit remediation for a portfolio of 300+ multinational clients. Completed the project in a record 1-year timeframe, supporting Compliance, Business, and AML teams with international regulatory standards.</li>
+          <li><strong>Stakeholder Management:</strong> Acted as the primary technical liaison between Compliance, Internal / External Audit, and Business units to streamline communication and accelerate SLA delivery.</li>
+          <li><strong>Technical Mentorship:</strong> Provided specialized training and guidance to 10+ team members and external partners on data integrity, risk reporting, and corporate due diligence.</li>
+          <li><strong>Process Optimization:</strong> Improved operational workflows for the Nordic market by identifying and remediating information gaps in high-exposure corporate accounts.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">American Express <span class="job-role">&mdash; KYC Analyst, Global Services</span></span>
+          <span class="job-date">2022 – 2023</span>
+        </div>
+        <ul>
+          <li><strong>Client Portfolio Management:</strong> Managed end-to-end Due Diligence for a portfolio of 100+ large-cap multinational corporations, ensuring accurate risk assessment and onboarding.</li>
+          <li><strong>Data Integrity:</strong> Leveraged Salesforce and internal analytical tools to reconcile sensitive financial data, maintaining "low-error" standards for corporate risk reporting.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-company">MayoristaNet <span class="job-role">&mdash; Sales Team Member</span></span>
+          <span class="job-date">2021 – 2022</span>
+        </div>
+        <ul>
+          <li><strong>Commercial Strategy:</strong> Managed face-to-face client acquisition and lead generation within assigned territories.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Education</div>
+      <div class="edu">
+        <div class="edu-top">
+          <span class="edu-degree">B.S. in Economics</span>
+          <span class="job-date">2025</span>
+        </div>
+        <div class="edu-school">Faculty of Economic Sciences (FCE) &middot; University of Buenos Aires (UBA)</div>
+      </div>
+      <ul style="padding-left: 22px; margin-top: 6px;">
+        <li style="font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 4px;">Seminar: "Artificial Intelligence and Economic Applications" &mdash; FCE, UBA.</li>
+        <li style="font-size: 13px; color: var(--text-mid); line-height: 1.7;">University project: "Topics in Digital Economy" &mdash; AI tools applied to finance.</li>
+      </ul>
+      <div class="edu" style="margin-top: 18px;">
+        <div class="edu-top">
+          <span class="edu-degree">High School Diploma (Natural Sciences track)</span>
+          <span class="job-date">2019</span>
+        </div>
+        <div class="edu-school">Hölters Schule &middot; Bilingual German / Spanish &middot; Intensive English curriculum</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="section">
+        <div class="section-label">Core Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Financial Analysis</span>
+          <span class="skill-tag highlight">Capital Markets</span>
+          <span class="skill-tag highlight">KPI Reporting</span>
+          <span class="skill-tag highlight">Stakeholder Management</span>
+          <span class="skill-tag highlight">Data Integrity</span>
+          <span class="skill-tag">Audit Remediation</span>
+          <span class="skill-tag">Process Improvement (SLA)</span>
+          <span class="skill-tag">Key Risk Indicators (KRI)</span>
+          <span class="skill-tag">Meeting Materials &amp; Presentations</span>
+          <span class="skill-tag">Teamwork</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Technical</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Advanced Excel (Dashboards)</span>
+          <span class="skill-tag highlight">R (Econometrics Projects)</span>
+          <span class="skill-tag">Salesforce</span>
+          <span class="skill-tag">MS Office (Word, PowerPoint, Outlook)</span>
+          <span class="skill-tag">SQL &mdash; In Progress</span>
+          <span class="skill-tag">Power BI &mdash; In Progress</span>
+          <span class="skill-tag">Digital Assets / DeFi Research</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Languages</div>
+      <div class="skill-tags">
+        <span class="skill-tag highlight">Spanish &mdash; Native</span>
+        <span class="skill-tag highlight">English &mdash; Advanced (FCE B2)</span>
+        <span class="skill-tag">German &mdash; A2 (ZDP)</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Projects &amp; Extracurricular</div>
+      <p class="summary" style="margin-bottom: 10px;"><strong>Digital Asset Portfolio Management (Personal Project)</strong></p>
+      <ul style="padding-left: 22px;">
+        <li style="font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 4px;">Portfolio monitoring and performance tracking; research across DeFi protocols and tokenization trends.</li>
+        <li style="font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 4px;">On-chain metrics monitoring (activity / flows) to support investment hypotheses.</li>
+        <li style="font-size: 13px; color: var(--text-mid); line-height: 1.7;">Risk-focused approach: documentation of rationale, updates, and post-trade review.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-logo">Sagan Passport</span>
+    <span class="footer-conf">Confidential &middot; M&amp;A / Finance Search &middot; Batch 2 &middot; April 24, 2026</span>
+  </div>
+</div>
+</body>
+</html>
